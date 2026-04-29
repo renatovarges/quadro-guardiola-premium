@@ -19,7 +19,7 @@ ROUNDS_FILE = ROOT_PROJECT_DIR / "RODADAS_BRASILEIRAO_2026.txt"
 PHOTOS_FILE = ROOT_PROJECT_DIR / "tcc_fotos_jogadores.html"
 EXPORT_POSITION_ORDER = list(POSITION_CONFIG.keys())
 
-st.set_page_config(page_title="Nova Plataforma TCC", page_icon="⚽", layout="wide")
+st.set_page_config(page_title="Plataforma Guardiola", page_icon="⚽", layout="wide")
 
 
 def check_pin() -> bool:
@@ -194,7 +194,7 @@ def build_indications_csv_bytes(target_round: int) -> bytes | None:
 
 ensure_state()
 
-st.title("Nova Plataforma TCC")
+st.title("Plataforma Guardiola")
 st.caption(f"Projeto base em `{ROOT_PROJECT_DIR}`")
 
 rounds_data = get_rounds()
