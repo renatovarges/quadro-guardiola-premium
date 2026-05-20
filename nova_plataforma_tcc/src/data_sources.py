@@ -217,7 +217,7 @@ def fetch_mpv_map(gm_token: str) -> dict[int, float]:
             if isinstance(payload, dict):
                 for athlete_id, values in payload.items():
                     if isinstance(values, dict) and "minimo_para_valorizar" in values:
-                        mpv_map[int(athlete_id)] = float(values.get("minimo_para_valorizar", 0.0))
+                        mpv_map[int(athlete_id)] = float(values.get("minimo_para_valorizar") or 0.0)
                 if mpv_map:
                     return mpv_map
             if isinstance(payload, list):
